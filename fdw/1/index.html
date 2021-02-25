@@ -8,12 +8,15 @@
          *  Base values and variables
          */
         :root {
-            --gradient-text: linear-gradient(to right, #25B0F0, #EE3838);
+            --blue: #25B0F0;
+            --red: #EE3838;
+            --gradient-text: linear-gradient(to right, var(--blue), var(--red));
             --text-color: #4D4D4D;
             --text-highlight: #D4D4D4;
             --background: #242424;
             font-size: 12px;
             font-family: monospace, 'Courier New', Courier;
+            transition: all .6s;
         }
 
         /*
@@ -103,6 +106,10 @@
             -o-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
             -webkit-text-fill-color: transparent;
+        }
+
+        a:focus {
+            text-decoration: underline var(--blue);
         }
 
     </style>
