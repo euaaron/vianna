@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World | Aaron</title>
+    <style>
+        /*
+         *  Base values and variables
+         */
+        :root {
+            --gradient-text: linear-gradient(to right, #25B0F0, #EE3838);
+            --text-color: #4D4D4D;
+            --text-highlight: #D4D4D4;
+            --background: #242424;
+            font-size: 12px;
+            font-family: monospace, 'Courier New', Courier;
+        }
+
+        /*
+         * Animations
+         */
+
+        @keyframes text-box{
+            from { width: 0; }
+            to { width: 22.5rem; }
+        }
+
+        @keyframes cursor {
+            from { border-right-color: transparent; }
+            to { border-right-color: #D4D4D4CC;}
+        }
+
+        @keyframes fade-in {
+            from { opacity:0; }
+            to { opacity:1; }
+        }
+
+        /*
+         * Tag Styles
+         */
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            width: 100vw;
+            height: 100vh;
+
+            background-color: var(--background);
+        }
+
+        h1 {
+            text-align: center;
+            background: var(--gradient-text);
+            background-clip: text;            
+            -o-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-background-clip: text;
+
+            font-size: 8rem;            
+            -o-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+
+            animation: fade-in ease 4s;
+        }
+
+        p {        
+            overflow: hidden;
+            white-space: nowrap;
+            
+            color: var(--text-color);
+            border-right: solid .8rem transparent;
+
+            animation: text-box 4s steps(25,end) .8s 1 normal both,
+             cursor .8s steps(25,end) infinite;
+
+            animation-delay: 4s;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-highlight);
+        }
+
+        a:hover,
+        a:focus {
+            background: var(--gradient-text);
+            
+            background-clip: text;            
+            -o-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-background-clip: text;
+            
+            -o-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+    </style>
+</head>
+<body>    
+    <h1>Hello Miriã!</h1>
+    <p>Code written by Aaron Carneiro (<a href="https://github.com/euaaron" title="Aaron's GitHub page">@euaaron</a>)</p>
+</body>
+</html>
