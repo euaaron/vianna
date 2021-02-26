@@ -8,7 +8,8 @@
          *  Base values and variables
          */
         :root {
-            --blue: #25B0F0;
+            --green: #38EE38;
+            --blue: #3838EE;
             --red: #EE3838;
             --gradient-text: linear-gradient(to right, var(--blue), var(--red));
             --text-color: #4D4D4D;
@@ -17,6 +18,14 @@
             font-size: 12px;
             font-family: monospace, 'Courier New', Courier;
             transition: all .6s;
+        }
+
+        ::selection {
+            background-color: var(--background);
+            color: var(--green);
+            -o-text-fill-color: var(--green);
+            -moz-text-fill-color: var(--green);
+            -webkit-text-fill-color: var(--green);
         }
 
         /*
